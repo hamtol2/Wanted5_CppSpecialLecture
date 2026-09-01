@@ -4,6 +4,8 @@
 class Character
 {
 public:
+	virtual ~Character() {}
+
 	float attack = 10.0f;
 
 	// 하위 계층에서 확장이 가능하도록 가상 함수로 선언.
@@ -22,6 +24,11 @@ public:
 	virtual void Attack() override
 	{
 		std::cout << "워리어 공격. 공격력: " << attack << "\n";
+	}
+	
+	void UseShield()
+	{
+		std::cout << "Use Sheild.\n";
 	}
 };
 
@@ -84,11 +91,19 @@ int main()
 	level[1] = &warrior;
 	level[2] = &mage;
 
-	level[1]->armor = 
+	//level[1]->armor = 
 
 	// 모든 캐릭터에 대해 공격 실행.
 	for (Character* const character : level)
 	{
 		character->Attack();
+
+		// Warrior로 형변환(Down-Casting).
+		//Warrior* warrior = (Warrior*)character;
+		Warrior* warrior = dynamic_cast<Warrior*>(character);
+		if (warrior)
+		{
+			warrior->UseShield();
+		}
 	}
 }
