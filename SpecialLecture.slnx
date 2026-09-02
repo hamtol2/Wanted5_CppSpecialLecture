@@ -3,6 +3,7 @@
     <Platform Name="x64" />
   </Configurations>
   <Project Path="ArrayAndPointer/ArrayAndPointer.vcxproj" Id="de5c0b9d-117c-4c44-a526-2715d3d06112" />
+  <Project Path="BattleGame/BattleGame.vcxproj" Id="ecdc7bd1-106a-49df-8a9a-efe6a8c0351f" />
   <Project Path="Class/Class.vcxproj" Id="59295204-0c33-49d5-9202-b80bf044b2e0" />
   <Project Path="Pointer/Pointer.vcxproj" Id="278eb7bd-0f17-45b4-936a-8a7812a9ff0b" />
   <Project Path="Reference/Reference.vcxproj" Id="c38b6b6b-b4ef-4dc8-9b37-a39736273c26" />
